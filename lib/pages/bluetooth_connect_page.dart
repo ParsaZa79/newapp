@@ -75,6 +75,7 @@ class BluetoothConnectionStatus extends ChangeNotifier {
 
   Future<void> sendData(String data) async {
     if (_connectedDevice == null) {
+      return;
       throw Exception('No device connected');
     }
 
